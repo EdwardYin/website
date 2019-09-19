@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
     devbox.vm.box="generic/ubuntu1804"
     devbox.vm.hostname="controller"
     devbox.vm.network :private_network, ip: "192.168.11.110"
-    devbox.vm.synced_folder "../ed_food_blog", "/home/vagrant/vagrant", fsnotify: true
+    devbox.vm.synced_folder "../website", "/home/vagrant/vagrant", fsnotify: true
     
     # Start provisioning shell
     #devbox.vm.provision :shell, path: "scripts/bootstrap.sh"
